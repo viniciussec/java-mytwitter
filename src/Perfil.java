@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Perfil {
 	private String usuario;
-	private List<Perfil> seguidos;
-	private List<Perfil> seguidores;
-	private List<Tweet> timeline;
+	private ArrayList<Perfil> seguidos;
+	private ArrayList<Perfil> seguidores;
+	private ArrayList<Tweet> timeline;
 	private boolean ativo;
 	
 	public Perfil(String usuario) {
@@ -36,15 +35,15 @@ public abstract class Perfil {
 		return usuario;
 	}
 
-	public List<Perfil> getSeguidos() {
+	public ArrayList<Perfil> getSeguidos() {
 		return seguidos;
 	}
 
-	public List<Perfil> getSeguidores() {
+	public ArrayList<Perfil> getSeguidores() {
 		return seguidores;
 	}
 
-	public List<Tweet> getTimeline() {
+	public ArrayList<Tweet> getTimeline() {
 		return timeline;
 	}
 	
