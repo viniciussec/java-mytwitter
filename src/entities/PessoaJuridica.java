@@ -1,8 +1,9 @@
+package entities;
 
-public class PessoaFisica extends Perfil {
+public class PessoaJuridica extends Perfil{
 	private long cpf;
 	
-	public PessoaFisica(String usuario) {
+	public PessoaJuridica(String usuario) {
 		super(usuario);
 	}
 
@@ -13,9 +14,4 @@ public class PessoaFisica extends Perfil {
 	public void setCpf(long cpf) {
 		this.cpf = cpf;
 	}
-	
-	
-	
-	
-	
 }

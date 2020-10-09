@@ -1,3 +1,4 @@
+package entities;
 
 public class Tweet {
 	private String usuario;
