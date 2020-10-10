@@ -59,6 +59,9 @@ public class ViewController implements Initializable {
 
 	@FXML
 	private MenuItem menuItemSeguidos;
+	
+	@FXML
+	private MenuItem menuItemListar;
 
 	@FXML
 	public void onMenuItemPessoaFisicaAction() {
@@ -128,6 +131,11 @@ public class ViewController implements Initializable {
 	@FXML
 	public void onMenuItemSeguidosAction() {
 		loadView("/gui/Seguidos.fxml");
+	}
+	
+	@FXML
+	public void onMenuItemListarAction() {
+		loadView("/gui/Listar.fxml");
 	}
 
 	@Override

@@ -1,12 +1,11 @@
 package entities;
 import java.util.ArrayList;
-import java.util.List;
 
 import exceptions.UJCException;
 import exceptions.UNCException;
 
 public class RepositorioUsuario implements IRepositorioUsuario{
-	private List<Perfil> usuarios;
+	private ArrayList<Perfil> usuarios;
 	
 	public RepositorioUsuario() {
 		usuarios = new ArrayList<Perfil>();
@@ -21,9 +20,14 @@ public class RepositorioUsuario implements IRepositorioUsuario{
 	}
 
 	@Override
+	public String toString() {
+		return "RepositorioUsuario [usuarios=" + usuarios + "]";
+	}
+
+	@Override
 	public Perfil buscar(String usuario) {
 		for(Perfil p : usuarios) {
-			if(p.getUsuario() == usuario) {
+			if(p.getUsuario().equals(usuario)) {
 				return p;
 			}
 		}

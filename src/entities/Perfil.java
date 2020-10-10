@@ -8,6 +8,11 @@ public abstract class Perfil {
 	private ArrayList<Tweet> timeline;
 	private boolean ativo;
 	
+	@Override
+	public String toString() {
+		return "Perfil [usuario=" + usuario + ", ativo=" + ativo + "]";
+	}
+
 	public Perfil(String usuario) {
 		this.usuario = usuario;
 		seguidos = new ArrayList<Perfil>();

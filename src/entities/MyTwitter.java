@@ -133,4 +133,9 @@ public class MyTwitter implements ITwitter {
 		}
 		return repositorio.buscar(usuario).getSeguidos();
 	}
+
+	@Override
+	public String toString() {
+		return "MyTwitter [repositorio=" + repositorio + "]";
+	}
 }

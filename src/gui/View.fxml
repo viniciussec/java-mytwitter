@@ -27,6 +27,7 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Repositorio">
                     <items>
+                        <MenuItem fx:id="menuItemListar" mnemonicParsing="false" onAction="#onMenuItemListarAction" text="Listar" />
                         <MenuItem fx:id="menuItemBuscar" mnemonicParsing="false" onAction="#onMenuItemBuscarAction" text="Buscar" />
                       <MenuItem fx:id="menuItemAtualizar" mnemonicParsing="false" onAction="#onMenuItemAtualizarAction" text="Atualizar" />
                     </items>
