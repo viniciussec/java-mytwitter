@@ -12,6 +12,25 @@
          <children>
             <MenuBar>
               <menus>
+                  <Menu mnemonicParsing="false" text="MyTwitter">
+                    <items>
+                        <MenuItem fx:id="menuItemCriarPerfil" mnemonicParsing="false" onAction="#onMenuItemCriarPerfilAction" text="Criar Perfil" />
+                        <MenuItem fx:id="menuItemCancelarPerfil" mnemonicParsing="false" onAction="#onMenuItemCancelarPerfilAction" text="Cancelar perfil" />
+                      <MenuItem fx:id="menuItemTweetar" mnemonicParsing="false" onAction="#onMenuItemTweetarAction" text="Tweetar" />
+                        <MenuItem fx:id="menuItemTimeline" mnemonicParsing="false" onAction="#onMenuItemTimelineAction" text="Timeline" />
+                        <MenuItem fx:id="menuItemTweets" mnemonicParsing="false" onAction="#onMenuItemTweetsAction" text="Tweets" />
+                        <MenuItem fx:id="menuItemSeguir" mnemonicParsing="false" onAction="#onMenuItemSeguirAction" text="Seguir" />
+                        <MenuItem fx:id="menuItemNumeroSeguidores" mnemonicParsing="false" onAction="#onMenuItemNumeroSeguidoresAction" text="Numero de seguidores" />
+                        <MenuItem fx:id="menuItemSeguidores" mnemonicParsing="false" onAction="#onMenuItemSeguidoresAction" text="Seguidores" />
+                        <MenuItem fx:id="menuItemSeguidos" mnemonicParsing="false" onAction="#onMenuItemSeguidosAction" text="Seguidos" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Repositorio">
+                    <items>
+                        <MenuItem fx:id="menuItemBuscar" mnemonicParsing="false" onAction="#onMenuItemBuscarAction" text="Buscar" />
+                      <MenuItem fx:id="menuItemAtualizar" mnemonicParsing="false" onAction="#onMenuItemAtualizarAction" text="Atualizar" />
+                    </items>
+                  </Menu>
                 <Menu mnemonicParsing="false" text="Cadastrar">
                   <items>
                     <MenuItem fx:id="menuItemPessoaFisica" mnemonicParsing="false" onAction="#onMenuItemPessoaFisicaAction" text="Pessoa Física" />
