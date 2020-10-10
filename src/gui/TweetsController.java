@@ -1,6 +1,9 @@
 package gui;
 
+import java.util.ArrayList;
+
 import application.Main;
+import entities.Tweet;
 import exceptions.PDException;
 import exceptions.PIException;
 import gui.util.Alerts;
@@ -19,7 +22,9 @@ public class TweetsController {
 	@FXML
 	public synchronized void onBtTweetsAction() {
 		try {
-			System.out.println(Main.service.tweets(txtUserName.getText()));
+			ArrayList<Tweet> tweets = Main.service.tweets(txtUserName.getText());
+			System.out.println(tweets);
+			
 		} catch (PDException | PIException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {

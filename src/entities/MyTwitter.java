@@ -73,7 +73,7 @@ public class MyTwitter implements ITwitter {
 		ArrayList<Tweet> tweets = new ArrayList<>();
 		ArrayList<Tweet> timeline = repositorio.buscar(usuario).getTimeline();
 		for (Tweet t : timeline) {
-			if (t.getUsuario() == usuario) {
+			if (t.getUsuario().equals(usuario)) {
 				tweets.add(t);
 			}
 		}
