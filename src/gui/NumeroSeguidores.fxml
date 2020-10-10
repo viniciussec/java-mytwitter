@@ -6,23 +6,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox prefHeight="209.0" prefWidth="330.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<VBox prefHeight="209.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.NumeroSeguidoresController">
    <children>
       <Label text="Nome de usuário">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
-      <TextField>
+      <TextField fx:id="txtUserName">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </TextField>
-      <Button mnemonicParsing="false" text="Número de seguidores">
+      <Button fx:id="btNumeroSeguidores" mnemonicParsing="false" onAction="#onBtNumeroSeguidoresAction" text="Número de seguidores">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </Button>
+      <Label fx:id="numeroSeguidores">
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </Label>
    </children>
 </VBox>
