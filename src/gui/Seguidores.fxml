@@ -5,25 +5,37 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<VBox prefHeight="209.0" prefWidth="330.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<VBox prefHeight="209.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SeguidoresController">
    <children>
       <Label text="Nome de usuário">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
-      <TextField>
+      <TextField fx:id="txtUserName">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </TextField>
-      <Button mnemonicParsing="false" text="Seguidores">
+      <Button fx:id="btTweets" mnemonicParsing="false" onAction="#onBtTweetsAction" text="Seguidores">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </Button>
+      <Label fx:id="labelSeguidores">
+         <VBox.margin>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPerfis">
+         <VBox.margin>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </VBox.margin>
+      </Label>
    </children>
 </VBox>
-

@@ -22,6 +22,6 @@ public class Tweet {
 
 	@Override
 	public String toString() {
-		return "Tweet [usuario=" + usuario + ", mensagem=" + mensagem + "]";
+		return "\nUsuário: " + usuario + ", Mensagem: " + mensagem;
 	}
 }

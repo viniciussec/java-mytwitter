@@ -20,6 +20,7 @@ public class CancelarPerfilController {
 	public void onBtCancelarUsuarioAction(){
 		try {
 			Main.service.cancelarPerfil(txtUserName.getText());
+			Alerts.showAlert("Info", null, "Perfil cancelado com sucesso", AlertType.INFORMATION);
 		} catch (PIException | PDException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {

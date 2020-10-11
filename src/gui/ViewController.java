@@ -1,14 +1,11 @@
 package gui;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import application.Main;
 import gui.util.Alerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
@@ -16,13 +13,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 
-public class ViewController implements Initializable {
-
-	@FXML
-	private MenuItem menuItemBuscar;
-
-	@FXML
-	private MenuItem menuItemAtualizar;
+public class ViewController {
 
 	@FXML
 	private MenuItem menuItemPessoaFisica;
@@ -32,9 +23,6 @@ public class ViewController implements Initializable {
 
 	@FXML
 	private MenuItem menuItemAbout;
-
-	@FXML
-	private MenuItem menuItemCriarPerfil;
 
 	@FXML
 	private MenuItem menuItemCancelarPerfil;
@@ -59,9 +47,6 @@ public class ViewController implements Initializable {
 
 	@FXML
 	private MenuItem menuItemSeguidos;
-	
-	@FXML
-	private MenuItem menuItemListar;
 
 	@FXML
 	public void onMenuItemPessoaFisicaAction() {
@@ -76,21 +61,6 @@ public class ViewController implements Initializable {
 	@FXML
 	public void onMenuItemAboutAction() {
 		loadView("/gui/About.fxml");
-	}
-
-	@FXML
-	public void onMenuItemBuscarAction() {
-		loadView("/gui/Buscar.fxml");
-	}
-
-	@FXML
-	public void onMenuItemAtualizarAction() {
-		loadView("/gui/Atualizar.fxml");
-	}
-
-	@FXML
-	public void onMenuItemCriarPerfilAction() {
-		loadView("/gui/CriarPerfil.fxml");
 	}
 
 	@FXML
@@ -131,16 +101,6 @@ public class ViewController implements Initializable {
 	@FXML
 	public void onMenuItemSeguidosAction() {
 		loadView("/gui/Seguidos.fxml");
-	}
-	
-	@FXML
-	public void onMenuItemListarAction() {
-		loadView("/gui/Listar.fxml");
-	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-
 	}
 
 	private synchronized void loadView(String absoluteName) {

@@ -24,6 +24,7 @@ public class TweetarController {
 	public synchronized void onTweetarAction() {
 		try {
 			Main.service.tweetar(txtUserName.getText(), txtMensagem.getText());
+			Alerts.showAlert("Info", null, "Tweetado com sucesso", AlertType.INFORMATION);
 		} catch (PIException | MFPException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {

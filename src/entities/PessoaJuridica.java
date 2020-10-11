@@ -1,17 +1,17 @@
 package entities;
 
 public class PessoaJuridica extends Perfil{
-	private long cpf;
+	private long cnpj;
 	
 	public PessoaJuridica(String usuario) {
 		super(usuario);
 	}
 
-	public long getCpf() {
-		return cpf;
+	public long getCnpj() {
+		return cnpj;
 	}
 
-	public void setCpf(long cpf) {
-		this.cpf = cpf;
+	public void setCnpj(long cnpj) {
+		this.cnpj = cnpj;
 	}
 }

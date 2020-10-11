@@ -13,31 +13,30 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class TweetsController {
-	
+public class TimelineController {
 	@FXML
-	private Label labelTtText;
-	
-	@FXML
-	private Label labelTweets;
-	
-	@FXML
-	private TextField txtUserName;
+	TextField txtUserName;
 
 	@FXML
-	private Button btTweets;
+	Button btTimeline;
 
 	@FXML
-	public void onBtTweetsAction() {
+	Label labelTimeline;
+	
+	@FXML
+	Label labelTweets;
+	
+	public void onBtTimelineOnAction() {
 		try {
-			labelTtText.setText("Tweets");
-			ArrayList<Tweet> tweets = Main.service.tweets(txtUserName.getText());
-			labelTweets.setText(tweets.toString().substring(1,tweets.toString().length()-1));
-			
+			labelTimeline.setText("Timeline");
+			ArrayList<Tweet> timeline = Main.service.timeline(txtUserName.getText());
+			labelTweets.setText(timeline.toString().substring(1, timeline.toString().length() - 1));
+
 		} catch (PDException | PIException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {
 			txtUserName.setText("");
 		}
 	}
+
 }

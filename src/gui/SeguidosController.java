@@ -3,7 +3,7 @@ package gui;
 import java.util.ArrayList;
 
 import application.Main;
-import entities.Tweet;
+import entities.Perfil;
 import exceptions.PDException;
 import exceptions.PIException;
 import gui.util.Alerts;
@@ -13,26 +13,26 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class TweetsController {
-	
-	@FXML
-	private Label labelTtText;
-	
-	@FXML
-	private Label labelTweets;
+public class SeguidosController {
 	
 	@FXML
 	private TextField txtUserName;
 
 	@FXML
-	private Button btTweets;
+	private Button btSeguidos;
+	
+	@FXML
+	private Label labelSeguidos;
+	
+	@FXML
+	private Label labelPerfis;
 
 	@FXML
-	public void onBtTweetsAction() {
+	public void onBtSeguidosAction() {
 		try {
-			labelTtText.setText("Tweets");
-			ArrayList<Tweet> tweets = Main.service.tweets(txtUserName.getText());
-			labelTweets.setText(tweets.toString().substring(1,tweets.toString().length()-1));
+			labelSeguidos.setText("Seguidos:");
+			ArrayList<Perfil> seguidos = Main.service.seguidos(txtUserName.getText());
+			labelPerfis.setText(seguidos.toString().substring(1,seguidos.toString().length()-1));
 			
 		} catch (PDException | PIException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);

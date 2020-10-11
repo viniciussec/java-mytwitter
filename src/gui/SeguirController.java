@@ -24,6 +24,7 @@ public class SeguirController {
 	public synchronized void onSeguirAction() {
 		try {
 			Main.service.seguir(txtSeguidor.getText(), txtSeguido.getText());
+			Alerts.showAlert("Info", null, "Perfil seguido com sucesso", AlertType.INFORMATION);
 		} catch (PDException | SIException | PIException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {

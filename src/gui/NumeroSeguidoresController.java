@@ -23,7 +23,7 @@ public class NumeroSeguidoresController {
 	@FXML
 	public synchronized void onBtNumeroSeguidoresAction() {
 		try {
-			numeroSeguidores.setText(Integer.toString(Main.service.numeroSeguidores(txtUserName.getText())));
+			numeroSeguidores.setText("Número de seguidores: " + Integer.toString(Main.service.numeroSeguidores(txtUserName.getText())));
 		} catch (PDException | PIException e) {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {

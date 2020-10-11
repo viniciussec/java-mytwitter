@@ -7,11 +7,6 @@ public abstract class Perfil {
 	private ArrayList<Perfil> seguidores;
 	private ArrayList<Tweet> timeline;
 	private boolean ativo;
-	
-	@Override
-	public String toString() {
-		return "Perfil [usuario=" + usuario + ", ativo=" + ativo + "]";
-	}
 
 	public Perfil(String usuario) {
 		this.usuario = usuario;
@@ -61,5 +56,8 @@ public abstract class Perfil {
 		return ativo;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Usuário: " + usuario;
+	}
 }
