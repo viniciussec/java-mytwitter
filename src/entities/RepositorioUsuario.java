@@ -39,6 +39,7 @@ public class RepositorioUsuario implements IRepositorioUsuario{
 		if(buscar(usuario.getUsuario())==null) {
 			throw new UNCException(usuario.getUsuario());
 		}
-		//implementar resto aki (ainda não entendi)
+		usuarios.remove(buscar(usuario.getUsuario()));
+		usuarios.add(usuario);
 	}
 }

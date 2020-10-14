@@ -35,6 +35,7 @@ public class CriarPessoaJuridicaController {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {
 			txtUserName.setText("");
+			txtCNPJ.setText("");
 		}
 	}
 }

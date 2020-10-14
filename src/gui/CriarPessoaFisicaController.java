@@ -35,6 +35,7 @@ public class CriarPessoaFisicaController {
 			Alerts.showAlert("Error", null, e.getMessage(), AlertType.ERROR);
 		} finally {
 			txtUserName.setText("");
+			txtCPF.setText("");
 		}
 	}
 }

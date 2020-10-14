@@ -48,6 +48,10 @@ public class MyTwitter implements ITwitter {
 		tweet.setMensagem(mensagem);
 		tweet.setUsuario(usuario);
 		repositorio.buscar(usuario).addTweet(tweet);
+		ArrayList<Perfil> seguidores = repositorio.buscar(usuario).getSeguidores();
+		for(Perfil p : seguidores) {
+			p.addTweet(tweet);
+		}
 	}
 
 	@Override
