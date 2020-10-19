@@ -2,8 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import exceptions.PEException;
-import exceptions.UJCException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -37,7 +35,7 @@ public class Main extends Application {
 		return mainScene;
 	}
 
-	public static void main(String[] args) throws UJCException, PEException {
+	public static void main(String[] args) {
 		service = new MyTwitterService();
 		launch(args);
 	}

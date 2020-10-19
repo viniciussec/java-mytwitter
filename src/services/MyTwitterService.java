@@ -21,14 +21,6 @@ public class MyTwitterService {
 		this.tt = new MyTwitter(repositorio);
 	}
 	
-	public Perfil search(String user) {
-		return repositorio.buscar(user);
-	}
-	
-	public RepositorioUsuario listar() {
-		return repositorio;
-	}
-	
 	public void criarPerfil(Perfil perfil) throws PEException {
 		tt.criarPerfil(perfil);
 	}
